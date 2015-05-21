@@ -11,5 +11,10 @@
 	<h:form>
 		<h:commandButton value="submit" action="#{login.submit}" />
 	</h:form>
+	
+	<h:dataTable value="#{login.getUsers()}" var="item">
+	<h:column>#{item}</h:column>
+	</h:dataTable>
+	
 </h:body>
 </html>

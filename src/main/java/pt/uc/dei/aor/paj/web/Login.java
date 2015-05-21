@@ -1,5 +1,7 @@
 package pt.uc.dei.aor.paj.web;
 
+import java.util.List;
+
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
@@ -32,5 +34,9 @@ public class Login {
 	
 	public void submit() {
 		userEJB.populate();
+	}
+	
+	public List<String> getUsers() {
+		return userEJB.getUsers();
 	}
 }

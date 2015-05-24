@@ -7,12 +7,15 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 
 import pt.uc.dei.aor.paj.ejb.UserEJBRemote;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Named
 @RequestScoped
 public class Login {
 	@EJB
 	private UserEJBRemote userEJB;
+	static final Logger logger = LoggerFactory.getLogger(Login.class);
 	
 	private String username;
 	private String password;
@@ -33,6 +36,9 @@ public class Login {
 	
 	
 	public void submit() {
+		logger.info("submitting");
+		logger.error("error");
+		logger.debug("debugging");
 		userEJB.populate();
 	}
 	

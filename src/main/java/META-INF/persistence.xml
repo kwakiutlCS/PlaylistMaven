@@ -7,11 +7,6 @@
 	<jta-data-source>java:jboss/datasources/Playlist</jta-data-source>
 	<class>pt.uc.dei.aor.paj.data.User</class>
 	<properties>
-		<property name="javax.persistence.jdbc.user" value="postgres" />
-		<property name="javax.persistence.jdbc.password" value="jaajaa" />
-		<property name="javax.persistence.jdbc.url" value="jdbc:postgresql:Playlist" />
-		<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
-
 		<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
 		<property name="hibernate.hbm2ddl.auto" value="create" />
 	</properties>

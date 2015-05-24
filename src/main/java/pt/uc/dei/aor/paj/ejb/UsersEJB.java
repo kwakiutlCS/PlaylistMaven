@@ -17,17 +17,16 @@ import pt.uc.dei.aor.paj.data.User;
 public class UsersEJB implements UserEJBRemote {
 	@PersistenceContext(name="Users")
 	EntityManager em;
-
-
+	
 	public UsersEJB() {
-        // TODO Auto-generated constructor stub
+       
     }
 
 	@Override
 	public void populate() {
-		// TODO Auto-generated method stub
 		em.persist(new User("palerma", "123"));
 		em.persist(new User("tonto", "123"));
+		
 	}
 
 	@Override
@@ -43,4 +42,6 @@ public class UsersEJB implements UserEJBRemote {
 		 return usernames;
 	}
 
+	
+	
 }
